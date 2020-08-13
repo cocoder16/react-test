@@ -1,0 +1,28 @@
+.navigator {
+    position: relative;
+    border-bottom: 1px solid #56d5fa;
+}
+
+.navigator ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 24px;
+}
+
+.navigator ul li {
+    display: inline;
+    padding: 0;
+    margin-right: 40px;
+}
+
+.navigator ul li a {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.navigator ul li a:hover {
+    color: #56d5fa;
+}
