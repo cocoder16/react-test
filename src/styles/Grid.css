@@ -1,0 +1,61 @@
+.grid {
+    position: relative;
+    width: 100%; height: 100%;
+    color: #29384b;
+    text-align: center;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.grid input[type=text] {
+    float: left;
+    width: 200px; height: 24px;
+    outline: none;
+    margin: 12px 0; padding-left: 10px;
+}
+
+.grid table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+.grid table tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #56d5fa;
+}
+
+.grid table .thead-tr {
+    background-color: #29384b;
+}
+
+.grid table tr th {
+    border: 1px solid #fff;
+    padding: 10px;
+    opacity: 0.7;
+}
+
+.grid table tr .active {
+    opacity: 1;
+}
+
+.grid table tr th .arrow {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0; height: 0;
+    margin-left: 5px; cursor: pointer;
+}
+
+.grid table tr th .asc, .grid table tr th .dsc {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+
+.grid table tr th .asc {
+    border-bottom: 4px solid #fff;
+}
+
+.grid table tr th .dsc {
+    border-top: 4px solid #fff;
+}
