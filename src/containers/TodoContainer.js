@@ -21,8 +21,10 @@ const TodoContainer = () => {
 
     // todo값 저장
     const addTodo = () => {
-        setList([...list, todo]);
-        clearInputValue();
+        if (todo !== '') {
+            setList([...list, todo]);
+            clearInputValue();
+        }
     };
 
     const handleInputKeyDown = e => {

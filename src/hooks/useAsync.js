@@ -34,7 +34,7 @@ const reducer = (state, action) => {
     }
 };
 
-const useAsync = (callback, initialParamArr, deps = []) => { //deps= dependencies
+const useAsync = (callback, initialParamArr, dependencies = []) => {
     const [state, dispatch] = useReducer(reducer, {
         loading: false,
         data: null,
@@ -53,7 +53,7 @@ const useAsync = (callback, initialParamArr, deps = []) => { //deps= dependencie
 
     useEffect(() => {
         fetchData(initialParamArr);
-    }, deps);
+    }, dependencies);
 
     return [state, fetchData];
 }
