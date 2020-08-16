@@ -4,7 +4,7 @@ import { useRef } from 'react';
 
 const useInput = (setState) => {
     const inputEle = useRef();
-    const changeHandler = e => {
+    const handleChange = e => {
         setState(e.target.value);
     };
     const clearValue = () => {
@@ -12,7 +12,7 @@ const useInput = (setState) => {
         setState('');
     }
 
-    return [inputEle, changeHandler, clearValue];
+    return [inputEle, handleChange, clearValue];
 }
 
 export default useInput;

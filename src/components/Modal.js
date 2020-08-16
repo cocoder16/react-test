@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Modal = ({
-    turnOff, statusOfModal
+    turnOff, animationStage
 }) => (
-    <div className={statusOfModal}>
+    <div className={animationStage}>
         <div className='modal-mask'>
             <div className='modal-wrapper'>
                 <div className='modal-container'>

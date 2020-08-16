@@ -1,0 +1,36 @@
+.async {
+    position: relative;
+    width: 100%; height: 100%;
+    text-align: center;
+}
+
+.async button {
+    width: 150px; height: 50px;
+    color: #fff;
+    font-size: 18px;
+    background-color: #56d5fa;
+    border-radius: 8px;
+    margin: 0 10px;
+    outline: none;
+}
+
+.async .active {
+    background-color: #29384b;
+}
+
+.async .wrapper {
+    margin-top: 50px;
+}
+
+.async .wrapper p {
+    font-size: 20px;
+}
+
+.async .wrapper p span {
+    color: #56d5fa;
+    font-weight: 700;
+}
+
+.async .wrapper img {
+    height: 200px;
+}

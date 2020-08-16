@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Todo = ({
+const TodoItem = ({
     index, value, removeTodo
 }) => {
     const handleRemoveItem = () => {
@@ -19,4 +19,4 @@ const Todo = ({
     )
 };
 
-export default Todo;
+export default TodoItem;
