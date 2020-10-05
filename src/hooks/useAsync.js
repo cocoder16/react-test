@@ -34,7 +34,7 @@ const reducer = (state, action) => {
     }
 };
 
-const useAsync = (callback, initialParamArr, dependencies = []) => {
+const useAsync = (callback, initialParamArr = [], dependencies = []) => {
     const [state, dispatch] = useReducer(reducer, {
         loading: false,
         data: null,
@@ -44,7 +44,12 @@ const useAsync = (callback, initialParamArr, dependencies = []) => {
     const fetchData = async (paramsArr) => {
         dispatch({type: 'LOADING'});
         try {
-            const data = await callback(...paramsArr);
+            let data;
+            if (!paramsArr) {
+                data = await callback();
+            } else {
+                data = await callback(...paramsArr);
+            }
             dispatch({type: 'SUCCESS', data});
         } catch (e) {
             dispatch({type: 'ERROR', error: e});
